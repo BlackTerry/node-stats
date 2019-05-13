@@ -2,21 +2,17 @@ var http = require("http");
 
 const net  = require('net')
 
-const web3 = require('web3')
+const Web3 = require('web3')
 
 console.log(web3.isConnected()) // return true if connected
 
-var version = web3.version.getNode(callback(error, result)());
+var version = web3.version.getNode(callback(error, result){}});
 
 http.createServer(function (request, response) {
-   // Send the HTTP header
-   // HTTP Status: 200 : OK
-   // Content Type: text/plain
+
    response.writeHead(200, {'Content-Type': 'text/plain'});
 
-   // Send the response body as "Hello World"
    response.end('Hello World\n');
 }).listen(50000);
 
-// Console will print the message
 console.log('Server running at http://127.0.0.1:50000/');
