@@ -1,8 +1,11 @@
 var http = require("http");
 const net  = require('net')
-const Web3 = require('web3')
-const web3 = new Web3(new Web3.providers.IpcProvider("\\\\.\\ether1\\geth.ipc",net))
-console.log(web3.isConnected()) // return true if connected
+var Web3 = require('web3');
+var provider = new Web3.providers.HttpProvider('http://localhost:8545');
+var web3 = new Web3(provider);
+
+console.log("isConnected=");
+web3.eth.net.isListening().then(console.log);
 
 http.createServer(function (request, response) {
    // Send the HTTP header
