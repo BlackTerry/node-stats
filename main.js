@@ -12,11 +12,16 @@ const web3 = new Web3(new Web3.providers.IpcProvider("/home/terry/.ether1/geth.i
 console.log(web3.isConnected()) // return true if connected
 
 web3.version.getNetwork((error, result) => {
-console.log(result)
+    console.log('The result is: ' + result)
 });
 
-app.get('/', function (req, res, result) {
-    res.render('index');
+
+app.get('/', function (req, res, next) {
+    web3.version.getNetwork((error, result) => {
+        res.render('index',{
+            title:result
+        });
+    });
 });
 
 app.listen(50000)
