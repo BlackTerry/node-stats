@@ -1,7 +1,7 @@
 var http = require("http");
 const net  = require('net')
 const Web3 = require('web3')
-const web3 = new Web3(new Web3.providers.IpcProvider("\\\\.\\pipe\\geth.ipc",net))
+const web3 = new Web3(new Web3.providers.IpcProvider("/root/.ether1/geth.ipc",net))
 console.log(web3.isConnected()) // return true if connected
 
 http.createServer(function (request, response) {
