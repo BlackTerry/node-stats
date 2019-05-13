@@ -7,8 +7,9 @@ const Web3 = require('web3')
 const web3 = new Web3(new Web3.providers.IpcProvider("/root/.ether1/geth.ipc",net))
 console.log(web3.isConnected()) // return true if connected
 
-var version = web3.version.getNetwork(callback(error, result)())
-console.log(version);
+web3.version.getNetwork((error, result) => {
+console.log(result)
+});
 
 http.createServer(function (request, response) {
 
