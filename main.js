@@ -4,9 +4,8 @@ const net  = require('net')
 
 const Web3 = require('web3')
 
-console.log(web3.isConnected()) // return true if connected
-
-var version = web3.version.getNode(callback(error, result)());
+var version = web3.version.network;
+console.log(version);
 
 http.createServer(function (request, response) {
 
