@@ -16,7 +16,7 @@
     "url": "https://github.com/fallengravity/node-stats/issues"
   },
   "homepage": "https://github.com/fallengravity/node-stats#readme"
-  },
+  }
   "dependencies": {
     "web3": "0.19.0"
   }
