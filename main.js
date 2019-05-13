@@ -10,13 +10,6 @@ console.log(web3.isConnected()) // return true if connected
 var version = web3.version.api;
 console.log(version);
 
-var version = web3.version.node;
-console.log(version);
-
-var version = web3.version.network;
-console.log(version); 
-
-
 http.createServer(function (request, response) {
    // Send the HTTP header
    // HTTP Status: 200 : OK
