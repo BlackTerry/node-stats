@@ -2,7 +2,7 @@ var http = require("http");
 
 const net  = require('net')
 
-const Web3 = require('web3')
+const web3 = require('web3')
 
 console.log(web3.isConnected()) // return true if connected
 
